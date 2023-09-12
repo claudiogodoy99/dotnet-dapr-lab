@@ -17,10 +17,10 @@ public class CounterController : ControllerBase
 
     [Topic("pubsub","count")]
     [HttpGet()]
-    public IActionResult Post(int value) {
+    public IActionResult Get([FromRoute]int value) {
         _logger.LogInformation($"Counter value: {value}");
         return Ok(new {
-            message = "success"
+            message = "SUCCESS"
         });
     }
 }

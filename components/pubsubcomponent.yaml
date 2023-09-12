@@ -1,0 +1,12 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub
+spec:
+  type: pubsub.azure.servicebus.queues
+  version: v1
+  metadata:
+  # Required when not using Azure AD Authentication
+  - name: connectionString
+    value: ""
+

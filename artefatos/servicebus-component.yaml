@@ -1,0 +1,12 @@
+componentType: pubsub.azure.servicebus.queues
+version: v1
+ignoreErrors: false
+secrets:
+  - name: connectionstring
+    value: Endpoint=sb://generichuebr.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=N6Vy2E8hcfutX07g1/Vhn4F9LMW5Nf2rU+ASbPamLLE=
+metadata:
+  - name: connectionString
+    secretRef: connectionstring
+scopes:
+  - app-publisher
+  - app-subscriber

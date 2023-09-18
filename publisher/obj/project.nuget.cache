@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "E3eoudMcQQGElbmhj7+MN8e+AaNN6Y75ydeimjS66DCy9rmpgbWPpEqpoMtWD4rO7h+d/CZFHfrKnbUGHyY+UA==",
+  "dgSpecHash": "xIx8l7yCOxyeIs7Efg/UGx/sQLiQKEuu8mfhDwEtv4SFDaPaADvpGBhxkGj7bSIFHpuM39yDX/6xSQt3xzGMHA==",
   "success": true,
   "projectFilePath": "C:\\repos\\dotnet-dapr-lab\\publisher\\publisher.csproj",
   "expectedPackageFiles": [

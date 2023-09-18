@@ -1,0 +1,18 @@
+componentType: pubsub.azure.eventhubs
+version: v1
+ignoreErrors: false
+secrets:
+  - name: connectionstring
+    value: Endpoint=sb://tdchuebr.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=FUFvzGwddtqrcbjstA597aqWI28F+qCkP+AEhN6zhls=
+metadata:
+  - name: consumerId
+    value: group1
+  - name: storageAccountName
+    value: teststorage
+  - name: storageContainerName
+    value: testcontainer
+  - name: connectionString
+    secretRef: connectionstring
+scopes:
+  - app-publisher
+  - app-subscriber

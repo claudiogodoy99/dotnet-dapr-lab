@@ -4,14 +4,11 @@ using Dapr.Client;
 
 var daprClient = new DaprClientBuilder().Build();
 
-int i =0;
-while(true) {
-    
-    await daprClient.PublishEventAsync<int>("pubsub", "count",i++ );
+int i = 0;
 
-    if(i % 500 == 0){
-        await Task.Delay(5);
-        Console.WriteLine($"Published {i} messages");
-    }
+while(true) {
+    Thread.Sleep(10000);
+    await daprClient.PublishEventAsync<int>("pubsub", "count",i++ );
+    Console.WriteLine($"Published {i} messages");
 }
 

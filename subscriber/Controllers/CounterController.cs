@@ -7,7 +7,8 @@ namespace consumer.Controllers;
 [Route("[controller]")]
 public class CounterController : ControllerBase
 {
-   
+    private static int _counter = 0;
+
     private readonly ILogger<CounterController> _logger;
 
     public CounterController(ILogger<CounterController> logger)
@@ -16,11 +17,10 @@ public class CounterController : ControllerBase
     }
 
     [Topic("pubsub","count")]
-    [HttpGet()]
-    public IActionResult Get([FromRoute]int value) {
-        _logger.LogInformation($"Counter value: {value}");
-        return Ok(new {
-            message = "SUCCESS"
-        });
+    [HttpPost("/count")]
+    public IActionResult Post(int value) {
+        _counter++;
+        _logger.LogInformation($"Received  {_counter}");
+        return Ok();
     }
 }
